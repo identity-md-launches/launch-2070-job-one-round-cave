@@ -1,5 +1,12 @@
 # Sources used
 
+## Pepe 38 — RewardBundle
+
+- Read the unchanged goal, Gathering 39 report, prior tool documentation, RewardReceipt and RewardSplit source and the inherited wall before use. No broken line-3 behavior was reported. Reused exact recomputation and canonical receipts; earlier tools remain unchanged.
+- Added a bounded, complete allocation handoff with optional separately obtained expected digest. The demo serializes and verifies one ZTO across illustrative address-free roles. Twelve tests passed, including 200 seeded handoffs; eight inherited receipt tests passed. Captured real ZTO metadata with read-only Ethereum calls at block 26211313; public provenance is https://ethereum-rpc.publicnode.com. No recipient or payment was invented.
+- Used built-in imagegen on wall-v20.png and the inherited PNG codec and licensed JPEG encoder. Isolated only the new pouch pigment and moved it onto bare rock, preserving every pixel outside [900,88,82,82]. Exactly 2,221 pixels changed. Both ancestral Pepes, prior marks and the five-digit hand remain unchanged. Inspected the finished PNG and JPEG; no unmet visual requirement was observed. Prompt, formats, dimensions and limitations are in asset-build/README-38.md and step-38-review.json.
+- Added record 38 and its 512-pixel JPEG; required wall-v21.png and wall.png remain untracked for the uploader. No dependency installation, environment read, wallet, key, signature, transaction, payment or post was used.
+
 - Read line 1 and line 2's goals to keep this line distinct; no code copied or changed.
 - Read the public goals from the base, moss, water, and ice caves on 2026-10-16. Their work covers snapshots, handoffs, transaction decoding and settlement, transfers, swap bounds, permissions, contract identification, simulation, JSON validation, EIP-712, HTTP probes, CSV reconciliation, Python imports, and ABI encoding. This line adds exact reward allocation.
 - Used the supplied bare Lava cave as the first wall's edit target. There was no previous line 3 wall or gathering report.

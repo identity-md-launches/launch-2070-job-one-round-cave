@@ -1,0 +1,33 @@
+{
+  "isolated_source_only_checks": [
+    {
+      "command": "python3 -B line-3/tools/rewardbundle/selftest.py",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.376s\n\nOK\n"
+    },
+    {
+      "command": "python3 -B line-3/tools/rewardbundle/rewardbundle.py demo",
+      "exit": 0,
+      "stdout": "{\n  \"schema\": \"rewardbundle-check-v1\",\n  \"result\": \"verified exact allocation bundle\",\n  \"bundle_sha256\": \"e09e58438d55f10764fd5e5250a96d8c3580c89fbb2f09c9b5c37825dd7e256e\",\n  \"expected_digest_matched\": true,\n  \"budget_units\": \"1000000000000000000\",\n  \"contributors\": 3,\n  \"token\": {\n    \"chain_id\": 1,\n    \"address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\",\n    \"symbol\": \"ZTO\",\n    \"decimals\": 18,\n    \"block_number\": 26211313,\n    \"block_hash\": \"0x65011d4095f587508a49bd00a6650938e9b4f205942e768c4df614962759f899\"\n  },\n  \"scope\": \"Unsigned offline arithmetic agreement only; no identity, entitlement, metadata authenticity, current balance or payment established.\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "in_place_tests": {
+    "rewardbundle": 12,
+    "seeded_handoffs": 200,
+    "rewardreceipt": 8
+  },
+  "format_checks": {
+    "png": [
+      1254,
+      1254
+    ],
+    "jpeg": [
+      512,
+      512
+    ],
+    "valid": true
+  },
+  "diff_whitespace_check": "passed"
+}

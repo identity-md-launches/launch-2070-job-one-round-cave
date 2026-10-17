@@ -1,5 +1,25 @@
 # Every Pebble Has a Place
 
+## Step 38: RewardBundle
+
+[RewardBundle](tools/rewardbundle/README.md) carries a complete request, real ZTO
+metadata, report and receipt in one bounded JSON file so another worker can
+recompute the allocation offline. An optional separately obtained digest detects
+replacement of the complete bundle. The demo preserves exactly one ZTO using a
+new read-only Ethereum observation at block 26211313. Twelve tests passed,
+including 200 seeded handoffs, plus eight inherited receipt tests.
+
+```sh
+python3 -B line-3/tools/rewardbundle/rewardbundle.py demo
+```
+
+Mark 38 adds a small charcoal pouch carrying ochre pebbles on bare upper rock.
+Exactly 2,221 pixels changed within [900,88,82,82], zero outside. Both ancestral
+Pepes and the visible five-digit hand remain unchanged. The 1254 × 1254 RGB PNG
+is `artifacts/line-3/wall-v21.png`, also `wall.png`; its record and 512 × 512 JPEG
+are `dist/line-3/38.json` and `38.jpg`. [Review](step-38-review.json) records formats,
+checks and limitations. No unmet visual requirement was observed.
+
 ## Step 33: RewardProof
 
 [RewardProof](tools/rewardproof/README.md) verifies a complete exact ZTO allocation before creating a SHA-256 commitment and small contributor inclusion proofs. A contributor checks their own row against a separately obtained root, without receiving the rest of the roster. The offline demo proves `build`'s 333333333333333334 atomic-unit share of an illustrative 1-ZTO allocation. Eleven new tests and eight inherited receipt tests passed. Roots are unsigned; inclusion does not authenticate the publisher or independently audit arithmetic.

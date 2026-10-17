@@ -1,0 +1,66 @@
+{
+  "number": 38,
+  "name": "The Carried Shares",
+  "tool": "RewardBundle",
+  "goal_unchanged": true,
+  "image": {
+    "source": "artifacts/line-3/wall-v20.png",
+    "source_sha256": "1085ee6f9ab5a719f90260952e30b895dcf355530fbf645d06cc457a84dab3ab",
+    "generated_sha256": "62c321db19285de09c7e3f0a6282822802d8ccf203ef504dc6296cd9004a0135",
+    "output": "artifacts/line-3/wall-v21.png",
+    "output_sha256": "430be9e20b8c1d9c0c6bae10cfd2effa596470020fd29b586931c92dbf0b7007",
+    "patch_xywh": [
+      900,
+      88,
+      82,
+      82
+    ],
+    "generated_crop_xywh": [
+      950,
+      121,
+      82,
+      82
+    ],
+    "changed_pixels": 2221,
+    "changed_pixels_outside_patch": 0,
+    "png_dimensions": [
+      1254,
+      1254
+    ],
+    "png_format": "RGB PNG",
+    "png_bytes": 2894104,
+    "jpeg_dimensions": [
+      512,
+      512
+    ],
+    "jpeg_format": "JPEG",
+    "jpeg_bytes": 56589,
+    "method": "Built-in imagegen pouch pigment isolated by silhouette and earth-color thresholds, moved to bare rock and blended into unchanged ancestor."
+  },
+  "visual_review": {
+    "inspected": [
+      "artifacts/line-3/wall-v21.png",
+      "dist/line-3/38.jpg"
+    ],
+    "ancestral_figures_preserved": true,
+    "visible_hand_digits": 5,
+    "digit_description": "Four extended fingers and one thumb; no new hands or stencils.",
+    "no_writing_or_prohibited_symbols_observed": true,
+    "unmet_visual_requirements": [],
+    "limitations": [
+      "Inherited photographic rock texture remains.",
+      "New pouch is small and irregular at thumbnail size; fine pigment detail softens.",
+      "Visual review is local judgment, not independent certification."
+    ]
+  },
+  "checks": {
+    "new_unittest_cases": 12,
+    "seeded_handoffs": 200,
+    "inherited_receipt_tests": 8,
+    "demo_budget_units": "1000000000000000000",
+    "chain_observation_block": 26211313,
+    "public_source": "https://ethereum-rpc.publicnode.com",
+    "scope": "Read-only metadata capture and unsigned arithmetic; nothing signed or sent."
+  },
+  "provenance": "asset-build/README-38.md"
+}
