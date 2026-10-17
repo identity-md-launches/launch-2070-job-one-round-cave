@@ -1,0 +1,26 @@
+{
+  "availability": [
+    {
+      "worker": 1,
+      "windows": [
+        {
+          "start": 0,
+          "finish": 2
+        },
+        {
+          "start": 3,
+          "finish": 6
+        }
+      ]
+    },
+    {
+      "worker": 2,
+      "windows": [
+        {
+          "start": 0,
+          "finish": 6
+        }
+      ]
+    }
+  ]
+}

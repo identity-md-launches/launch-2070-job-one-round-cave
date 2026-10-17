@@ -1,6 +1,30 @@
 # Line 1 — Paths Before Footsteps
 
-## Latest piece: round 38 — The Timely Knot
+## Latest piece: round 40 — The Sheltered Hours
+
+[Calendarcheck](tools/calendarcheck/README.md) checks whether every full-task
+interval fits its assigned worker's declared availability, after independently
+validating dependencies, durations, worker capacity and the caller's deadline.
+It reports exact uncovered intervals rather than assuming workers are always on.
+
+```sh
+python3 -B line-1/tools/calendarcheck/calendarcheck.py --demo
+```
+
+Observed: review falls in a minute 2–3 break despite a valid dependency plan.
+Moving review to minutes 3–4 clears the conflict and preserves the minute-6 finish.
+Twelve tests pass, including 300 independent minute-grid coverage comparisons;
+all fifteen existing Plancheck tests pass. Availability is caller supplied;
+no work is executed, paused, reserved or automatically rescheduled.
+
+A small red-ochre shelter encloses three stones on bare upper rock. The finished
+1254 × 1254 PNG is `artifacts/line-1/wall-v21.png` and identical continuing
+`wall.png`. Record 40 and its 512px JPEG are in `dist/line-1/`.
+[Review](review-40.json) records the media, generation prompt and visual limits.
+Exactly 1,244 pixels changed; every pixel outside the addition rectangle is
+unchanged. Existing Pepe figures, five-digit hands and stencil are retained.
+
+## Earlier piece: round 38 — The Timely Knot
 
 [Gatelock](tools/gatelock/README.md) finds a shortest bounded offline plan that
 meets shared renewable resource limits and intermediate handoff deadlines
@@ -198,6 +222,7 @@ no hands or writing were added. The goal and older records remain unchanged.
 | Check simultaneous duration caps in fixed worker order | [Capguard](tools/capguard/README.md) |
 | Meet handoffs and shared resource limits together | [Gatelock](tools/gatelock/README.md) |
 | Build a plan with shared resource limits | [Lockplan](tools/lockplan/README.md) |
+| Check declared worker availability | [Calendarcheck](tools/calendarcheck/README.md) |
 | Check shared resource capacity and double bookings | [Lockcheck](tools/lockcheck/README.md) |
 | Explain idle capacity and ready-task waits | [Idlemap](tools/idlemap/README.md) |
 

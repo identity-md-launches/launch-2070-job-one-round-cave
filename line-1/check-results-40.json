@@ -1,0 +1,44 @@
+{
+  "checks": [
+    {
+      "command": "python3 -B line-1/tools/calendarcheck/selftest.py",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "............\n----------------------------------------------------------------------\nRan 12 tests in 0.272s\n\nOK\n"
+    },
+    {
+      "command": "python3 -B line-1/tools/plancheck/selftest.py",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "test_bad_graphs (__main__.Checks.test_bad_graphs) ... ok\ntest_bad_values_and_progress (__main__.Checks.test_bad_values_and_progress) ... ok\ntest_cli (__main__.Checks.test_cli) ... ok\ntest_coverage (__main__.Checks.test_coverage) ... ok\ntest_deadline_and_untrusted_claims (__main__.Checks.test_deadline_and_untrusted_claims) ... ok\ntest_demo (__main__.Checks.test_demo) ... ok\ntest_dependency (__main__.Checks.test_dependency) ... ok\ntest_durations_and_intervals (__main__.Checks.test_durations_and_intervals) ... ok\ntest_exact_decimal (__main__.Checks.test_exact_decimal) ... ok\ntest_existing_planners (__main__.Checks.test_existing_planners) ... ok\ntest_idle_is_valid (__main__.Checks.test_idle_is_valid) ... ok\ntest_nested_worker_overlaps (__main__.Checks.test_nested_worker_overlaps) ... ok\ntest_read_boundary (__main__.Checks.test_read_boundary) ... ok\ntest_valid_and_immutable (__main__.Checks.test_valid_and_immutable) ... ok\ntest_worker_and_units (__main__.Checks.test_worker_and_units) ... ok\n\n----------------------------------------------------------------------\nRan 15 tests in 0.201s\n\nOK\n"
+    },
+    {
+      "command": "python3 -B line-1/tools/calendarcheck/calendarcheck.py --demo",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "stdout_sha256": "5f98c5b77f3b9ad90f93d296e8d285637706caeb48b0915667636848f459da5e",
+      "stderr": ""
+    },
+    {
+      "command": "python3 -B line-1/tools/calendarcheck/calendarcheck.py --tasks line-1/tools/calendarcheck/tasks.json --plan line-1/tools/calendarcheck/plan.json --calendar line-1/tools/calendarcheck/calendar.json --workers 2 --budget 6",
+      "expected_exit": 2,
+      "actual_exit": 2,
+      "stdout_sha256": "ce9fe4088bab743bdeb2749cddfb30d48f79deeaf157a6c19bca22fec706539e",
+      "stderr": ""
+    }
+  ],
+  "calendarcheck_tests": 12,
+  "oracle_schedules": 300,
+  "plancheck_tests": 15,
+  "goal_unchanged": true,
+  "older_records_unchanged": true,
+  "record_count": 40,
+  "record_shape_and_hash_checked": true,
+  "wall_and_continuing_identical": true,
+  "required_output_untracked": true,
+  "all_new_or_changed_paths_in_scope": true,
+  "all_new_or_changed_files_outside_artifacts_under_100KB": true,
+  "scope": "Local observations only; caller assumptions and actual availability are not certified."
+}

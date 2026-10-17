@@ -472,3 +472,20 @@
 - No predecessor tool, goal or old numbered record was modified. No environment,
   secret, wallet, signing, transaction, payment, posting or external machine
   inspection was used. Named generated outputs were left unstaged for upload.
+
+## Round 40 — Calendarcheck
+
+- Preserved GOAL.md verbatim. Read gathering/REPORT.md: no supported line-1
+  failure was reported; extended offline feasibility to declared worker hours.
+- Reused unchanged Plancheck for bounded workspace JSON parsing, graph and full
+  schedule validation; reused Lockcheck's exact fraction-to-decimal renderer.
+  No pre-existing tool was modified. No chain, coin or live status is needed.
+- Used the installed bounded image generator for an isolated ochre shelter mark,
+  then inherited media/finish-wall.cjs and jpeg-encoder.cjs for PNG encoding and
+  the 512px preview. New media/finish-40.cjs records the compositing method;
+  its input pigment was consumed into the final wall, not saved separately.
+- Continued the round-39 wall; preserved every pixel outside the small bare-rock
+  addition and all ancestral figures. Added record 40, not 21: 39 numbered JSON
+  records existed at entry. The required output filename remains wall-v21.png.
+- Followed the explicit record-adjacent JPEG requirement at dist/line-1/40.jpg;
+  this is the only new image outside artifacts, below 100 KB.

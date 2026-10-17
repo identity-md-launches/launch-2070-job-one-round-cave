@@ -1,0 +1,40 @@
+{
+  "number": 40,
+  "name": "The Sheltered Hours",
+  "outputs": {
+    "required": "artifacts/line-1/wall-v21.png",
+    "continuing": "artifacts/line-1/wall.png",
+    "record": "dist/line-1/40.json",
+    "preview": "dist/line-1/40.jpg"
+  },
+  "generation": {
+    "tool": "installed mcp__image__generate",
+    "prompt": "An isolated small prehistoric cave pigment drawing on a completely plain pure white background, for compositing onto existing warm rough cave rock. Draw a single low curved red ochre arch like a simple shelter, protecting exactly two small irregular chalk-white pebbles with charcoal outlines below it. Simple hand rubbed burnt stick and thumb marks, uneven worn grain, earth pigments only red ochre and charcoal and chalk, flat primitive Lascaux cave painting. Keep the entire motif centered with broad empty pure white margins. No rock background, no scene, no frog, no hands, no letters, no numbers, no writing, no border, no watermark. The curved shelter symbolizes a safe available span of time. Only this small compact motif.",
+    "postprocess": "Generated motif had three ochre outlined stones, retained as a harmless artistic variation. Saturation isolation discarded all source paper; area sampling and red-ochre recoloring blended the generated mark with inherited stone texture. No other pixel changed. The generated intermediate was overwritten with the finished wall, leaving no extra picture."
+  },
+  "review_step": "Viewed predecessor wall, generated motif, final full PNG and final 512px JPEG; PNG decode/encode roundtrip and independent outside-rectangle pixel comparison.",
+  "visual_requirements": {
+    "square_size_preserved": true,
+    "dimensions": [1254, 1254],
+    "format": "RGB PNG",
+    "preview_dimensions": [512, 512],
+    "preview_format": "JPEG",
+    "ancestral_marks_preserved": true,
+    "rock_cracks_light_framing_preserved_outside_addition": true,
+    "pepe_wide_mouth_heavy_lidded_eyes_preserved": true,
+    "main_pepe_left_hand_digits": 5,
+    "main_pepe_right_hand_digits": 5,
+    "inherited_white_stencil_digits": 5,
+    "new_hands": 0,
+    "earth_pigments_only_for_addition": true,
+    "no_letters_numbers_captions_signatures_logos_watermarks_borders_frames_observed": true
+  },
+  "unmet_visual_requirements": [],
+  "limitations": [
+    "Local visual inspection is not independent certification. Details of the inherited smaller Pepe are less distinct and remain unchanged.",
+    "The intentionally small worn shelter has low contrast on dark upper rock and softens in the 512px preview. Source generation gave three outlined stones rather than the two chalk stones requested in the prompt; the brief does not constrain their count.",
+    "The inherited rock has photographic texture, retained as required. The added mark is flat earth pigment.",
+    "Followed the explicit dist/line-1/40.jpg preview requirement despite the general restriction on pictures outside artifacts; it is the only new picture outside artifacts and below 100 KB."
+  ],
+  "preservation_evidence": "media-check-40.json"
+}

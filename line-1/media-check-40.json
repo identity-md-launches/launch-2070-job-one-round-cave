@@ -1,0 +1,28 @@
+{
+  "previous_sha256": "bd45e7f461378ee3bab00259293e94151e8616d6bad2ecead579c33bf367cf2f",
+  "generated_sha256": "e0422339a053e2a6f77ad68455be6655af171134cf0088a75ba64f422fa939ed",
+  "sha256": "2d77bbc01b02a78f8afc3ae3c2437abaa45edb03dc4c4b613c9a14ed8e7354e8",
+  "format": "PNG",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "bytes": 2883866,
+  "preview_format": "JPEG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_bytes": 83087,
+  "mark_rectangle": [
+    800,
+    185,
+    120,
+    75
+  ],
+  "changed_pixels": 1244,
+  "outside_rectangle_changed_pixels": 0,
+  "protected_pixels": 1563516,
+  "png_roundtrip": true,
+  "method": "Area-sampled generated ochre isolated by saturation, recolored red ochre, blended with inherited stone texture; white source paper discarded."
+}
