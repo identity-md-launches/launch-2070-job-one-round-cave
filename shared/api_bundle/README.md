@@ -1,5 +1,74 @@
 # API Bundle — approved ZIP snapshots and conservative OpenAPI comparison
 
+Gathering 40 adds line 4 **ContainsCheck** and line 2 **SafeZip's directory
+validation**. Python standard library only, with all runtime sources included.
+Run from the repository root:
+
+```sh
+python3 -B shared/api_bundle/contains_demo.py
+python3 -B shared/api_bundle/contains_selftest.py
+```
+
+Observed: a hypothetical response-array predicate behind an unchanged local
+reference expands from two enum values to three. Tuple mode retains review;
+contains mode identifies a potential break. Identical inputs are clean. The
+operation comes from the historical public IMD description; the changed schema
+is illustrative. Nothing is extracted, executed or called.
+
+For your own received ZIPs:
+
+```sh
+python3 -B shared/api_bundle/api_bundle.py old.zip new.zip --contains --strict-layout
+```
+
+`contains=True` selects this analyzer in Python. `--contains` takes precedence
+over earlier analyzer flags and retains all their findings. Existing flags and
+positional arguments keep their behavior. Add `--old-sha256` and `--new-sha256`
+with independently reviewed actual archive digests to bind approval to bytes.
+Exits remain 0 (no detected break within the modeled subset), 1 (potential break),
+2 (refused input), 3 (unresolved review). Review is not approval.
+
+Every mode now also opens and validates empty-directory local records before
+analysis. Stored directories must contain no compressed bytes. Deflated ones
+must have one complete empty stream, zero CRC and no trailing stream bytes;
+raw reads are at most 4 KiB and allow one output byte before refusal. This
+closes the inherited skip of directory records. The report adds
+`checked_directories` and `all_directories_checked` to each bundle input.
+Approval, directory bounds, optional strict layout, safe inventory and every
+file/directory payload check use the same captured bytes. Matching approval
+hashes never bypass payload validation. Strict layout remains independently
+opt-in; directory validation is unconditional. Nothing is extracted.
+
+ContainsCheck supports OpenAPI 3.1 `contains` with positive matching minimum
+and no maximum by comparing resolved predicates with request/response variance.
+It compares count bounds when predicates resolve identically. Upper bounds
+combined with changed predicates, zero-minimum predicate changes, unsupported
+dialects and mixed policies stay review. At most 1,024 matching regions are
+visited; inherited schema/operation/tuple limits still apply. Remote references,
+malformed visited rules and exhausted budgets refuse. Findings concern a schema
+region: lengths, composition, unreachable values, custom semantics and runtime
+server behavior can change whole-payload compatibility. A clean report supplies
+neither publisher trust nor a runtime guarantee. ZIP budgets are cooperative
+bounds, not an OS sandbox; use a workspace without hostile concurrent mutation.
+
+Nine new integration tests cover unchanged references, direction, mixed-policy
+review, analyzer precedence and four CLI exits, digest/CRC/layout ordering,
+valid stored/deflated directories in old and new analyzer modes, seven corrupt
+directory variants (even with matching approval), cancellation, remote targets,
+invalid flags and pair budgets. All integration suites and demos are also run
+from an isolated source-only copy. `SOURCES.json` records 23 vendored modules,
+original hashes and adaptations; SafeZip is byte-identical to line 2's repair.
+
+The live read-only public-description trial is recorded in
+`gathering/public-trial-40.json`: 23,132 bytes matched the saved capture, five
+operations compared cleanly, and an explicit empty directory passed validation.
+It visited no contains rules, so the live trial checks integration, while the
+hypothetical example and tests exercise contains semantics.
+
+## Earlier shared versions
+
+# API Bundle — approved ZIP snapshots and conservative OpenAPI comparison
+
 Gathering 39 joins line 4 **TupleCheck** to line 2 **ZipSeal** in the existing
 shared pipeline. `--tuples` (Python `tuples=True`) selects the most inclusive
 analyzer, including key/map/dispatch and every earlier finding. Strict ZIP

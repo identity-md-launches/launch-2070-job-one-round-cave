@@ -13,7 +13,7 @@ import time
 import zipfile
 import zlib
 
-from vendor import apidelta, oauthcheck, schemecheck, servercheck, paramcheck, statuscheck, fallbackheaders, dispatchcheck, mapcheck, keycheck, tuplecheck, safezip, zipgate, zipseal
+from vendor import apidelta, oauthcheck, schemecheck, servercheck, paramcheck, statuscheck, fallbackheaders, dispatchcheck, mapcheck, keycheck, tuplecheck, containscheck, safezip, zipgate, zipseal
 
 MAX_ARCHIVE = 32 * 1024 * 1024
 
@@ -58,13 +58,16 @@ def read_bundle(path, member='openapi.json', expected_sha256=None, checkpoint=la
                                 directory_bytes=directory_bytes, checkpoint=checkpoint)
     selected = None
     inventory = []
+    directories = []
     actual_total = 0
     checkpoint()
-    with zipfile.ZipFile(io.BytesIO(raw)) as archive:
+    with io.BytesIO(raw) as snapshot, zipfile.ZipFile(snapshot) as archive:
         entries, _ = safezip.inventory(archive, limits, checkpoint, node_limit=nodes)
         for info, name in entries:
             checkpoint()
             if info.is_dir():
+                safezip.check_directory(archive, snapshot, info, checkpoint)
+                directories.append(name)
                 continue
             if name == member and info.file_size > apidelta.MAX_BYTES:
                 raise ValueError('selected description exceeds 1 MiB')
@@ -101,7 +104,8 @@ def read_bundle(path, member='openapi.json', expected_sha256=None, checkpoint=la
                  'approved_sha256_checked': expected_sha256 is not None,
                  'preflight': preflight,
                  'member': member, 'member_sha256': hashlib.sha256(selected).hexdigest(),
-                 'checked_files': inventory, 'all_payloads_crc_checked': True}
+                 'checked_files': inventory, 'all_payloads_crc_checked': True,
+                 'checked_directories': directories, 'all_directories_checked': True}
     if layout is not None:
         details['layout'] = layout
         details['strict_layout_checked'] = True
@@ -111,9 +115,9 @@ def read_bundle(path, member='openapi.json', expected_sha256=None, checkpoint=la
 def compare(old, new, member='openapi.json', old_sha256=None, new_sha256=None,
             seconds=None, cancelled=None, nodes=32000, directory_bytes=2097152,
             oauth=False, servers=False, parameters=False, statuses=False, fallback_headers=False,
-            dispatch=False, maps=False, keys=False, strict_layout=False, tuples=False):
-    if any(type(flag) is not bool for flag in (keys, strict_layout, tuples)):
-        raise ValueError('keys, strict_layout and tuples must be booleans')
+            dispatch=False, maps=False, keys=False, strict_layout=False, tuples=False, contains=False):
+    if any(type(flag) is not bool for flag in (keys, strict_layout, tuples, contains)):
+        raise ValueError('keys, strict_layout, tuples and contains must be booleans')
     if seconds is not None:
         try:
             valid_seconds = (not isinstance(seconds, bool)
@@ -136,7 +140,7 @@ def compare(old, new, member='openapi.json', old_sha256=None, new_sha256=None,
     a, before = read_bundle(old, member, old_sha256, checkpoint, nodes, directory_bytes, strict_layout)
     b, after = read_bundle(new, member, new_sha256, checkpoint, nodes, directory_bytes, strict_layout)
     checkpoint()
-    report = (tuplecheck if tuples else keycheck if keys else mapcheck if maps else dispatchcheck if dispatch else fallbackheaders if fallback_headers else
+    report = (containscheck if contains else tuplecheck if tuples else keycheck if keys else mapcheck if maps else dispatchcheck if dispatch else fallbackheaders if fallback_headers else
               statuscheck if statuses else paramcheck if parameters else servercheck if servers else
               oauthcheck if oauth else schemecheck).compare(a, b)
     checkpoint()
@@ -163,12 +167,13 @@ def main():
     parser.add_argument('--maps', action='store_true', help='also compare additionalProperties value schemas; includes all earlier analyzers')
     parser.add_argument('--keys', action='store_true', help='also compare OpenAPI 3.1 propertyNames key domains; includes all earlier analyzers')
     parser.add_argument('--tuples', action='store_true', help='also compare OpenAPI 3.1 ordered array positions; includes all earlier analyzers')
+    parser.add_argument('--contains', action='store_true', help='also compare OpenAPI 3.1 matching-item predicates and counts; includes all earlier analyzers')
     parser.add_argument('--strict-layout', action='store_true', help='require exact classic local ZIP record coverage before payload parsing')
     args = parser.parse_args()
     try:
         report = compare(args.old, args.new, args.member, args.old_sha256,
                          args.new_sha256, args.seconds, nodes=args.nodes,
-                         directory_bytes=args.directory_bytes, oauth=args.oauth, servers=args.servers, parameters=args.parameters, statuses=args.statuses, fallback_headers=args.fallback_headers, dispatch=args.dispatch, maps=args.maps, keys=args.keys, strict_layout=args.strict_layout, tuples=args.tuples)
+                         directory_bytes=args.directory_bytes, oauth=args.oauth, servers=args.servers, parameters=args.parameters, statuses=args.statuses, fallback_headers=args.fallback_headers, dispatch=args.dispatch, maps=args.maps, keys=args.keys, strict_layout=args.strict_layout, tuples=args.tuples, contains=args.contains)
         print(json.dumps(report, indent=2, allow_nan=False))
         return {'breaking': 1, 'review_required': 3, 'no_detected_breakage': 0}[report['status']]
     except (ValueError, OSError, RuntimeError, EOFError, zipfile.BadZipFile,

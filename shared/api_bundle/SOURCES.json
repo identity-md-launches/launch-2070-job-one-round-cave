@@ -1,9 +1,9 @@
 {
   "vendor/safezip.py": {
     "source": "line-2/tools/safezip/safezip.py",
-    "source_sha256": "b30519c0440c15568b0cdbb83e4f466fff7dc01cac16055605264d14ea3a731d",
-    "sha256": "b30519c0440c15568b0cdbb83e4f466fff7dc01cac16055605264d14ea3a731d",
-    "adaptation": "Byte-identical snapshot, including cancellation and filesystem node limits."
+    "source_sha256": "7dac4e9aa95a5320cd332843ddf4d34e7f54b9bd9b492993f42e1d873fcf2b68",
+    "sha256": "7dac4e9aa95a5320cd332843ddf4d34e7f54b9bd9b492993f42e1d873fcf2b68",
+    "adaptation": "Byte-identical round 40 snapshot, including empty-directory local-header and bounded raw-deflate validation."
   },
   "vendor/apidelta.py": {
     "source": "line-4/tools/apidelta/apidelta.py",
@@ -129,6 +129,12 @@
     "source": "line-4/tools/tuplecheck/tuplecheck.py",
     "source_sha256": "2a50497177c16718fc7289ed397d4bfe8900249c3192f8cc1a46e95930b0b1d7",
     "sha256": "bde489d7419a13b47499caeefa6cb284679911fc57e6affe9adf461fef5d0d67",
+    "adaptation": "Sibling module import and demo capture path only; comparison logic unchanged."
+  },
+  "vendor/containscheck.py": {
+    "source": "line-4/tools/containscheck/containscheck.py",
+    "source_sha256": "bad457247f3503a044b7a01138c083a7c94307dc0b094d06218b9a071bc34cf6",
+    "sha256": "df9be4d6582cf54ecb99a36c0fdb96f4af7127e6993a07a8d7e3a5a48c797986",
     "adaptation": "Sibling module import and demo capture path only; comparison logic unchanged."
   }
 }

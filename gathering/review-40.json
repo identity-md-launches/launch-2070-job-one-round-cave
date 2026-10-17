@@ -1,0 +1,28 @@
+{
+  "number": 40,
+  "wall": "artifacts/gathering/wall-v21.png",
+  "canonical": "artifacts/gathering/wall.png",
+  "wall_sha256": "9b56d636ac64fb24886c3171dbbcc967dce0c977f4b12a385e1f02e64d438d0d",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "RGB PNG",
+  "preview": "dist/gathering/40.jpg",
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "JPEG",
+  "image_tool": "built-in image_gen",
+  "prompt": "Use case: historical-scene. Create ONE isolated small prehistoric cave-pigment mark on a genuinely transparent background, wide horizontal composition about 3:1. It will be added to bare stone beside an existing ancestral cave painting. Draw a shallow, irregular red ochre bowl holding FOUR small rough pebble dabs: three yellow ochre pebbles and one dirty chalk-white pebble. A thin broken charcoal loop encircles only the white pebble, signifying a matched item checked in a handoff. Handmade uneven worn thumb-and-burnt-stick pigment, sparse dry-brush speckles and holes where stone will show through. Earth pigments only red/yellow ochre, charcoal black, chalk white; primitive Lascaux or Chauvet feeling. No rock background, no floor, no shadow, no gradient, no photographic objects, no 3D. No characters or hands. Absolutely no text, letters, numbers, captions, signatures, logos, borders or watermarks. Keep entire mark inside the transparent image with ample empty margin.",
+  "assembly": "Generated pigment resampled, earth-pigment mapped and alpha-composited inside [95,90,180,60] on bare upper-left stone. Every other RGB pixel identical to wall-v20.png.",
+  "visual_review": "Inspected finished full wall and final compressed JPEG. Inherited Pepe retains wide mouth and heavy-lidded eyes; counted four fingers and one thumb on each of two inherited hands. New mark has no hands. No writing, signatures, logos, watermarks, borders, real people or prohibited symbols observed. No ancestral mark was removed, moved or redrawn.",
+  "visual_requirements_unmet": [],
+  "limitations": [
+    "Local visual review is not independent certification.",
+    "Inherited rock texture and framing remain as supplied.",
+    "The small charcoal loop has low contrast on dark rock; fine details soften in the 512-pixel lossy JPEG."
+  ],
+  "preview_encoding": "Area-average full PNG to 512 square, JPEG quality 50 for the source upload limit."
+}

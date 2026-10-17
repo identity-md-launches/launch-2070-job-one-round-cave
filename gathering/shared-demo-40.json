@@ -1,0 +1,101 @@
+{
+  "baseline_source": "https://api.imd.fun/openapi.json",
+  "capture_sha256": "be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a",
+  "illustration": "Saved real operation with a hypothetical OpenAPI 3.1 contains rule; no observed service change.",
+  "previous_status": "review_required",
+  "changed_status": "breaking",
+  "unchanged_status": "no_detected_breakage",
+  "matching_regions": 1,
+  "findings": [
+    {
+      "severity": "review",
+      "code": "document_metadata_changed",
+      "location": "/",
+      "message": "Document metadata, components or extensions changed; review anything not covered by specific findings."
+    },
+    {
+      "severity": "breaking",
+      "code": "schema_enum_incompatible",
+      "location": "/paths/~1requests~1quote/post/responses/200/content/application~1json/schema/contains/enum",
+      "message": "Response enum can contain formerly excluded values."
+    }
+  ],
+  "inputs": {
+    "old": {
+      "archive_sha256": "915dfd8b279811add5b026fa7da5e2e8b599977b551ca137aed4c34dcd354a7c",
+      "approved_sha256_checked": true,
+      "preflight": {
+        "entries": 2,
+        "directory_bytes": 123,
+        "zip64": false
+      },
+      "member": "docs/openapi.json",
+      "member_sha256": "1b639fbc1577e33e41ec33f07a29e3e0e8fd7ce497298f522778045c73005aac",
+      "checked_files": [
+        {
+          "path": "docs/openapi.json",
+          "bytes": 22455,
+          "sha256": "1b639fbc1577e33e41ec33f07a29e3e0e8fd7ce497298f522778045c73005aac"
+        },
+        {
+          "path": "unselected.txt",
+          "bytes": 13,
+          "sha256": "e3629c018cd70fec0f28c0477b9e5e9ae6e7fed1e31bd7d606e54d881b41e1f3"
+        }
+      ],
+      "all_payloads_crc_checked": true,
+      "checked_directories": [],
+      "all_directories_checked": true,
+      "layout": {
+        "entries": 2,
+        "directory_bytes": 123,
+        "zip64": false,
+        "local_records": 2,
+        "local_header_bytes": 91,
+        "compressed_payload_bytes": 22468,
+        "descriptor_bytes": 0,
+        "end_record_bytes": 22
+      },
+      "strict_layout_checked": true
+    },
+    "new": {
+      "archive_sha256": "33044213e010567140702f4bcbc2a54a5afb113f6f3ae0a895c4bf4f82c3c51c",
+      "approved_sha256_checked": true,
+      "preflight": {
+        "entries": 2,
+        "directory_bytes": 123,
+        "zip64": false
+      },
+      "member": "docs/openapi.json",
+      "member_sha256": "2f6de04d54cc83e85433311bf3fd0612ced907e85af6567440bf5d6c7bc387ba",
+      "checked_files": [
+        {
+          "path": "docs/openapi.json",
+          "bytes": 22464,
+          "sha256": "2f6de04d54cc83e85433311bf3fd0612ced907e85af6567440bf5d6c7bc387ba"
+        },
+        {
+          "path": "unselected.txt",
+          "bytes": 13,
+          "sha256": "e3629c018cd70fec0f28c0477b9e5e9ae6e7fed1e31bd7d606e54d881b41e1f3"
+        }
+      ],
+      "all_payloads_crc_checked": true,
+      "checked_directories": [],
+      "all_directories_checked": true,
+      "layout": {
+        "entries": 2,
+        "directory_bytes": 123,
+        "zip64": false,
+        "local_records": 2,
+        "local_header_bytes": 91,
+        "compressed_payload_bytes": 22477,
+        "descriptor_bytes": 0,
+        "end_record_bytes": 22
+      },
+      "strict_layout_checked": true
+    }
+  },
+  "extracted": false,
+  "network_used": false
+}

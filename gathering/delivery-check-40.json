@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "wall_sha256": "9b56d636ac64fb24886c3171dbbcc967dce0c977f4b12a385e1f02e64d438d0d",
+  "png_dimensions": [
+    1254,
+    1254
+  ],
+  "png_format": "RGB PNG",
+  "png_bytes": 2788730,
+  "jpeg_dimensions": [
+    512,
+    512
+  ],
+  "jpeg_format": "JPEG",
+  "jpeg_bytes": 45955,
+  "records": 198,
+  "painted": 98,
+  "placeholders": 100,
+  "changed_pixels": 5209,
+  "pixels_changed_outside": 0,
+  "line_files_unchanged": 602,
+  "line_commands": 146,
+  "line_unittest_cases": 966,
+  "shared_tests_each": 122,
+  "shared_demos_each": 10,
+  "previews_reencoded": 19,
+  "preview_bytes_saved": 373107,
+  "export": {
+    "source_files": 1199,
+    "tar_gzip_bytes": 8287314,
+    "limit": 8388608,
+    "margin": 101294,
+    "scope": "Local tar.gz trial of all tracked and nonignored new non-artifact source files; scratch excluded; no archive saved. Daemon packaging is external."
+  },
+  "unmet_visual_requirements": [],
+  "visual_review": "Local manual inspection; byte checks do not certify visual quality."
+}

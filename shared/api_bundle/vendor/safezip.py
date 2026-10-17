@@ -11,6 +11,7 @@ from pathlib import Path
 import re
 import shutil
 import stat
+import struct
 import tempfile
 import time
 import unicodedata
@@ -111,6 +112,46 @@ def inventory(archive, limits, checkpoint=lambda: None, *, node_limit=32000):
     return entries, total
 
 
+def check_directory(archive, snapshot, info, checkpoint):
+    """Check local header and genuinely empty stored/deflated directory data.
+
+    ZipExtFile truncates output to the declared size, so reading a member whose
+    declared size is zero alone cannot prove its compressed stream is empty.
+    Bound each raw read and allow at most one decompressed byte before refusal.
+    """
+    checkpoint()
+    if info.CRC != 0:
+        raise Rejected('empty directory CRC must be zero')
+    # Opening performs zipfile's local-name, signature, overlap and flag checks.
+    with archive.open(info):
+        pass
+    if info.compress_type == zipfile.ZIP_STORED:
+        if info.compress_size:
+            raise Rejected('stored directory contains compressed data')
+        return
+    snapshot.seek(info.header_offset)
+    header = snapshot.read(30)
+    if len(header) != 30:
+        raise Rejected('truncated directory local header')
+    name_bytes, extra_bytes = struct.unpack_from('<HH', header, 26)
+    snapshot.seek(info.header_offset + 30 + name_bytes + extra_bytes)
+    remaining = info.compress_size
+    decoder = zlib.decompressobj(-15)
+    while remaining:
+        checkpoint()
+        chunk = snapshot.read(min(4096, remaining))
+        if not chunk:
+            raise Rejected('truncated directory compressed data')
+        remaining -= len(chunk)
+        if decoder.decompress(chunk, 1):
+            raise Rejected('directory compressed stream produces data')
+        if decoder.unused_data or decoder.unconsumed_tail or (decoder.eof and remaining):
+            raise Rejected('directory compressed stream has trailing data')
+    if not decoder.eof:
+        raise Rejected('directory compressed stream is incomplete')
+    checkpoint()
+
+
 def process(archive_path, output=None, *, entries=1000, file_bytes=16*1024*1024,
             total_bytes=64*1024*1024, archive_bytes=32*1024*1024, ratio=200,
             expected_sha256=None, seconds=None, cancelled=None, nodes=32000):
@@ -194,6 +235,7 @@ def process(archive_path, output=None, *, entries=1000, file_bytes=16*1024*1024,
                 record = {'path': name, 'kind': 'directory' if info.is_dir() else 'file',
                           'bytes': info.file_size}
                 if info.is_dir():
+                    check_directory(archive, snapshot, info, checkpoint)
                     if stage is not None:
                         (stage / name).mkdir(parents=True, exist_ok=True)
                 else:

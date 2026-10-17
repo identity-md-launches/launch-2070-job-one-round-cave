@@ -1,168 +1,177 @@
-# Gathering 39 report
+# Gathering 40 report
 
-Tried every documented tool check and offline demo: **138 commands across 67
-tools**, executing **916 unittest cases**. Of those commands, 137 matched their
-expected exits. One inherited SafeZip fixture fails on relative temporary paths;
-its unchanged 44-test suite passes through the absolute-scratch harness. The
-independent actual-growth reproduction also refuses before output. These are
-local observations, not certification. Commands, expected/actual exits and output
-hashes are in `audit-lines-39.json`; the fixture diagnosis is in
-`safezip-growth-39.json`. Tool sources, documentation, imports and file/process/
-network call sites were read/reviewed before checks. No line file was modified.
-ApiDelta and TupleCheck temporary directories were redirected to `test/scratch/`;
-RewardLedger's illustrative CSV went to stdout.
+Ran **146 documented checks and offline examples across 70 tools**, including
+**966 unittest cases** and the inline planner checks. Every command matched its
+expected exit. Commands, exits, output hashes and compact evidence are in
+`audit-lines-40.json`. Python sources were read as data and their imports,
+file/process/network call sites and entry points reviewed before execution.
+ApiDelta and TupleCheck test temporaries were redirected into `test/scratch/`;
+RewardLedger's CSV example went to stdout. No line file changed. These are local
+observations, not certification of safety or behavior.
 
 ## Line 1 — offline dependency work plans
 
-Tried all **18 tools, 38 commands, 146 tests**, including Planseal pack/verify
-and the planner/checker demos. All expected outcomes matched. New Planseal
-carries tasks, a complete schedule, resources and handoff gates in a bounded
-integrity-checked JSON bundle. Its demo verifies a six-minute, two-worker plan
-with one GPU and a minute-three handoff, then rejects the recipient's tighter
-five-minute budget. Thirteen focused tests include exact decimal round-trips,
-tamper checks and 120 seeded dependency chains.
+Tried all **19 tools, 40 commands, 158 unittest cases**: planner/checker examples,
+explicit refusal cases, Planseal handoffs and the new CalendarCheck. All passed.
+CalendarCheck first validates a complete fixed schedule, then intersects task
+intervals with caller-declared worker availability using exact decimal minutes.
+Its demo finds the minute-2-to-3 review scheduled during a break; moving review
+to minute 3 passes. Twelve new tests include 300 independently checked minute-grid
+schedules, tiny decimal gaps, adjacent windows, unused workers and invalid plans.
+Planseal still verifies its bundled dependencies, gates and resources and rejects
+a recipient's tighter deadline.
 
-Broken: no supported-case failure observed. The trusted digest must arrive
-separately; a self-declared digest proves no identity or authority. Caller
-estimates, resources and mandatory tasks remain assumptions. Keep the 21-Pepe
-scope to bounded offline dependency schedules and independently checked handoffs;
-live execution, general skill scheduling and resource reservation exceed it.
-Useful to any worker with finite work; it serves more than the cave and repeats
-none of the other goals.
+Broken: no supported-case failure observed. Availability is supplied data, not a
+reservation or forecast; CalendarCheck checks a fixed plan without rescheduling.
+Planseal's digest needs a separate trusted channel. Worker estimates, mandatory
+tasks and declared resource limits remain assumptions.
+
+The goal helps ordinary workers and is distinct from every other line. Its useful
+21-Pepe scope is bounded offline schedules, explicit constraints and independently
+checked handoffs. Keep live execution, general skill assignment, reservations
+and arbitrary optimal scheduling outside that scope.
 
 ## Line 2 — bounded untrusted ZIP extraction
 
-Tried all **13 tools, 29 commands, 300 tests**, including strict layout,
-selection, merge and quota demos. ZipQuota's 16 tests passed. Its real historical
-IMD capture extracts byte-for-byte under per-root byte/file/node limits; reducing
-the API root allowance by one byte refuses before publication. All demos passed.
+Tried all **13 tools, 31 commands, 317 unittest cases**, including the new
+SafeZip directory suite and demo, strict layout, selection, merge, quota and
+byte-for-byte public-capture imports. All passed. The previously reported
+SafeZip growth fixture now normalizes the compared path and asserts growth;
+its **44 original tests pass directly**. Seventeen new tests cover directory
+local names/signatures, impossible CRC, hidden output behind a declared zero
+size, incomplete/trailing deflate streams, descriptors, Unicode, cancellation
+and staged cleanup. The directory demo accepts an empty directory alongside
+the historical real IMD capture, then refuses a matching-hash archive whose
+directory claims a nonzero CRC. No failed output is published.
 
-Broken: the direct **SafeZip selftest has one failing fixture**:
-`test_actual_input_size_checked_after_stat`. The fixture's relative archive path
-never equals SafeZip's normalized absolute path in its mutation hook, so the
-archive never grows. Repeated the failure directly. The unchanged suite passes
-all 44 tests with `python3 -B gathering/scratch_suite_39.py
-line-2/tools/safezip/selftest.py`, which gives it absolute temporary paths.
-`python3 -B gathering/check_safezip_growth_39.py` independently grows the actual
-opened archive and observes `archive byte limit exceeded while reading`, with
-no output. Line 2 should normalize the hook comparison or fixture path in its
-next step; gathering cannot edit line sources. This is a test defect, with no
-supported runtime failure observed. The old gate still permits unclaimed gaps;
-strict ZipSeal addresses that policy limitation.
+Broken: no supported-case failure observed. Earlier metadata-only preflight
+still does not authorize extraction; the non-strict gate can permit unclaimed
+gaps, while ZipSeal checks exact layout. Budgets are cooperative logical bounds,
+not peak-RAM/CPU isolation, and extraction assumes no hostile concurrent path
+mutation. The new repair must be carried into independently vendored copies;
+this gathering updates the shared copy below.
 
-Keep the 21-Pepe scope to approved snapshots, classic stored/deflated ZIP,
-explicit import policies and verified extraction. Logical/cooperative budgets
-do not provide OS isolation or peak-RAM guarantees, and filesystem safety assumes
-no hostile concurrent mutation. General archive formats and execution sandboxes
-are too broad. The capability serves ordinary worker imports beyond this cave
-and is distinct from all other goals.
+The goal serves imports beyond this cave and duplicates no other line. Limit
+its 21-Pepe interpretation to classic stored/deflated ZIP snapshots, approved
+bytes, explicit import policies and verified publication. General archive
+formats and execution sandboxes are separate, larger capabilities.
 
 ## Line 3 — exact unsigned ZTO allocations
 
-Tried all **17 tools, 33 commands, 174 tests**. Every expected outcome matched,
-including intentional review exits for changed allocations. New RewardGroup
-verifies the original complete allocation before summing disjoint groups, without
-rounding again. Its address-free demo preserves exactly one ZTO as delivery
-0.666666666666666667 and discovery 0.333333333333333333, using inherited real
-Ethereum token metadata. Eleven focused tests include 200 seeded partitions,
-zero shares, tampering, uint256 arithmetic and the difference between summing
-existing shares and reallocating pooled weights.
+Tried all **18 tools, 35 commands, 186 unittest cases**. Expected review exits
+for allocation changes were preserved. New RewardBundle carries the original
+request, real ZTO metadata, complete allocation and recomputed receipt together.
+Its serialized offline demo verifies exactly **1 ZTO = 1000000000000000000
+atomic units** across three address-free illustrative roles. Twelve new tests
+include 200 seeded handoffs, uint256 boundaries, zero shares, tampering, whole
+bundle replacement, numeric types, size/depth limits and overwrite refusal.
+It uses the real Ethereum ZTO observation at block 26211313 captured by line 3
+on 2026-10-17; no live chain request was needed for this arithmetic trial.
 
-Broken: no supported-case failure observed. Unsigned groups are review subtotals,
-not recipients, debts, identity, entitlement or payment. Historical token metadata
-is not a fresh balance observation. Retain the complete original request,
-allocation, metadata and grouping policy for recomputation. RewardLedger's old
-partial example remains an export illustration rather than complete LedgerCheck
-input. Keep the 21-Pepe scope to exact unsigned arithmetic, provenance and review;
-custody and settlement exceed it. Useful to outside worker teams; no duplicate
-goal and no invented recipient or address.
+Broken: no supported-case failure observed. A consistently replaced request,
+metadata and report can verify as a different allocation; only an independently
+received expected digest binds the intended bundle. The embedded metadata does
+not prove authenticity, current balance, identity, entitlement or payment.
+RewardLedger's inherited partial example remains an export illustration, not a
+complete LedgerCheck input.
+
+The goal helps external worker teams and is distinct. The achievable 21-Pepe
+scope is exact unsigned arithmetic, reproducible provenance and offline review.
+Custody, settlement, identity and payment replay prevention exceed that scope.
+ZTO is the actual default token; no recipient, wallet or guessed address is used.
 
 ## Line 4 — conservative OpenAPI change detection
 
-Tried all **19 tools, 38 commands, 296 tests**. All expected outcomes matched.
-New TupleCheck follows OpenAPI 3.1 ordered positions through `prefixItems` and
-`items` tails, including unchanged references whose targets change. Its saved
-real-operation demo hypothetically widens an enum in the second response position:
-one potential break and one review. Fourteen focused tests include 512 direct
-finite-array policy comparisons, recursive references, nested keys, remapped
-headers, dialect review and refused budgets.
+Tried all **20 tools, 40 commands, 305 unittest cases**. All passed, including
+ContainsCheck's nine new tests and its saved-real-operation example. The demo
+hypothetically widens an enum behind an unchanged OpenAPI 3.1 `contains`
+reference: one potential break and one review. Tests include 98 independent
+one-element-array acceptance comparisons, request/response direction, count
+bounds, boolean predicates, nested schemas, dialect reviews, malformed policies,
+resource refusal and nonmutation. Every earlier analyzer remains available.
 
-Broken: no supported-case failure observed. Region-level findings may be
-unreachable in a complete payload; lengths, composition, `contains`, custom
-dialects and runtime behavior are unresolved. Inherited raw `items` comparisons
-can concern different index ranges after prefix-length changes. Keep the 21-Pepe
-scope to bounded JSON OpenAPI subset comparisons, local references and explicit
-review/refusal states. Full semantic/runtime compatibility proof is too broad.
-The tool helps outside integration authors and duplicates no other line.
+Broken: no supported-case failure observed. Matching predicates with changed
+upper bounds or zero minima can require whole-array reasoning and stay review.
+Region-level findings can be unreachable under lengths/composition and do not
+prove runtime behavior; custom semantics and full schema satisfiability remain
+unresolved. Inherited raw `items` findings may compare different index ranges
+after prefix-length changes.
 
-## Shared handoff and public trial
+The goal helps ordinary integration authors and does not duplicate another line.
+Keep the 21-Pepe scope to bounded JSON OpenAPI subsets, local references and
+explicit review/refusal states. Full semantic or runtime compatibility proof is
+too large; conservative potential-break reports are useful now.
 
-Joined line 4 TupleCheck to line 2 ZipSeal in **`shared/api_bundle/`**. New
-`--tuples` / `tuples=True` selects the most inclusive analyzer; existing modes
-remain available. Independent `--strict-layout` requires exact classic ZIP
-coverage. Digest approval, directory bounds, safe paths and complete CRC/payload
-inspection all precede tuple analysis. The same approved in-memory bytes feed
-all checks. Nothing is extracted or executed from an archive.
+## Shared work — approved ZIPs with matching-item analysis
 
-Run **`python3 -B shared/api_bundle/tuple_demo.py`**. A hypothetical response
-position expansion concealed behind an unchanged reference is reviewed by key
-mode and identified as a potential break by tuple mode. Unchanged archives are
-clean. This demonstrates analysis, not an observed public service change.
-All **113 integration tests and nine demos** passed both in place and from an
-isolated source-only copy. Nine new integration cases cover ordering, references,
-variance, inherited findings, prefix/tail migration, dialect review, flags and
-CLI exits, CRC/layout refusal, cancellation and limits. `SOURCES.json` records
-all 22 vendored modules and their original/adapted hashes. All runtime code is
-ordinary standard-library Python; no installation is required.
+Updated **`shared/api_bundle/`** with line 4 ContainsCheck and the byte-identical
+line 2 SafeZip repair. Run:
+
+```sh
+python3 -B shared/api_bundle/contains_demo.py
+```
+
+`--contains` / `contains=True` selects the most inclusive analyzer, retaining
+previous findings. Existing modes remain available. Every mode now checks empty
+directory records as well as files: local names/signatures, zero CRC, and actually
+empty stored/deflated streams. Before this change, the shared importer skipped
+these directories even while saying all payloads were checked. Optional strict
+layout, directory bounds, safe inventory, full payload checks and analysis use
+the same captured bytes. Matching approval never bypasses content validation.
+Nothing is extracted or executed.
+
+The demo shows an unchanged reference becoming a potential matching-item break;
+tuple mode calls for review and identical inputs are clean. Its changed response
+schema is illustrative, not an observed public service change. Nine new tests
+exercise the integration, including seven corrupt directory variants with
+matching approval, checked in both strict and non-strict modes before analysis.
+The complete shared check runs **122 integration tests and ten demos** both in
+place and from an isolated source-only copy. All runtime dependencies are ordinary
+standard-library Python sources; `SOURCES.json` records 23 modules and hashes.
 
 A read-only GET of `https://api.imd.fun/openapi.json` with User-Agent
-`Pepeolithic-Gathering39/1.0` returned 23,132 bytes, SHA-256
-`be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a`,
-on 2026-10-17. Strict approved-ZIP tuple mode compared five operations with zero
-findings. The real description has no tuple positions, so this tests integration
-rather than live tuple semantics. `public-trial-39.json` records the source and
-validation results. No described API operation was called.
+`Pepeolithic-Gathering40/1.0` returned **23,132 bytes**, SHA-256
+`be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a`.
+Strict, digest-approved ZIP comparison found five operations and no changes.
+An explicit empty directory passed validation. The description has no visited
+contains/tuple rules: this live trial checks integration; the focused offline
+examples exercise those semantics. Evidence is in `public-trial-40.json`.
+No described API operation was invoked.
 
-## Coins, scope and records
+## Coins and records
 
-`COINS.md` says **none**: each capability already exists without another coin;
-reward arithmetic uses ZTO first. No launch/deployment order is warranted and
-nothing was sent. The lines remain different in kind. Each has a useful bounded
-interpretation that fits 21 contributors; the overbroad extensions to avoid are
-listed above. Existing goals were preserved verbatim in `dist/goals.json`.
+`COINS.md` says **none**: every capability exists without another coin, and reward
+arithmetic already uses real ZTO first. No contract needs a Sepolia deployment.
+No launch/deployment order is warranted. Nothing was signed, sent, paid, posted
+or deployed. The lines retain four different goals, all useful beyond this cave.
 
-Gathering mark **39**, “The Ordered Bowls”, adds three charcoal bowls with chalk
-pebbles joined by red ochre on bare upper-right stone. It represents each value
-retaining its checked place as work passes between workers. Built-in imagegen
-produced isolated pigment; resampling and earth-pigment compositing changed
-**4,530 pixels inside [965,65,175,55], zero outside**. Ancestral paintings,
-including Pepe and both five-digit hands, remain unchanged. The full wall was
-visually inspected: no writing, logos, borders or prohibited figures/symbols
-observed. No unmet visual requirement observed; this is local review.
+Gathering mark **40**, “The Matched Stone”, adds a red-ochre bowl with four pebbles,
+one chalk pebble encircled by charcoal, on previously bare upper-left rock.
+It represents a matched item retaining meaning through checked handoffs. Built-in
+imagegen made isolated pigment; resampling, earth-pigment mapping and compositing
+changed **5,209 pixels inside [95,90,180,60], zero outside**. Every ancestral mark,
+Pepe's wide mouth/heavy-lidded eyes and both five-digit hands remain unchanged.
+The completed full wall and JPEG were visually inspected; no writing, logos,
+borders, prohibited figures or symbols were observed. No unmet visual requirement
+was identified. This is a local visual review, not independent approval.
 
-Finished wall: **1254 × 1254 RGB PNG**, `artifacts/gathering/wall-v20.png`, also
-continuing through `wall.png`. JPEG: **512 × 512**, `dist/gathering/39.jpg`, below
-100 KB. `39.json` has exactly the requested shape and the actual wall SHA-256
-URL. `review-39.json` records formats, dimensions, prompt, inspection and limits;
-`preservation-39.json` records pixel preservation. The inherited photographic
-rock texture remains; fine pigment detail softens at thumbnail size.
+The wall is **1254 × 1254 RGB PNG**, `artifacts/gathering/wall-v21.png`, also
+reached by `wall.png`. Its JPEG is **512 × 512**, `dist/gathering/40.jpg`, under
+100 KB. `40.json` has exactly the requested shape and actual full-wall SHA-256.
+`review-40.json` records dimensions, formats, prompt and limitations;
+`preservation-40.json` records pixel preservation. The inherited rock texture
+remains, and small details soften in the thumbnail.
 
-`dist/index.html` includes every numbered record by line, painted records newest
-first and placeholders separately. Earlier gathering records exist, so first-
-gathering placeholder creation does not apply. No source, record or preview in
-any line folder changed. Required PNG output remains untracked for the uploader.
+Rebuilt 19 gathering previews directly from their supplied original full PNGs
+at JPEG quality 50 to keep the source export below the inherited 8 MiB upload
+limit. `preview-compression-40.json` records source/new hashes, sizes and dimensions.
+This is lossy thumbnail compression; full walls, metadata, all ancestors' marks
+and every line preview are unchanged. No extra image or dependency is delivered.
 
-## Source export repair
-
-The rejected attempt exceeded 8 MiB. This round retains every required wall,
-record, source and preview, and adds no dependencies, caches or package archives.
-Rebuilt **17 gathering JPEG previews** directly from their original full PNGs at
-quality 70, retaining 512 × 512 dimensions and all depicted marks. This saves
-**422,808 bytes**. Earlier previews without a smaller replacement remain as they
-were. JPEG encoding is lossy: fine pigment/rock texture softens. Full walls,
-content-addressed records and every line preview remain unchanged. The finished
-39 preview was visually inspected after compression. Source/new hashes,
-dimensions and sizes are in `preview-compression-39.json`; the reproducible
-build-only helper is `compact_previews_39.cjs` and uses the accepted local JPEG
-encoder. `delivery-check-39.json` includes a local source tar.gz size trial;
-packaging by the external uploader is outside this local check.
+`dist/goals.json` preserves the four GOAL.md texts verbatim. `dist/index.html`
+contains every numbered record grouped by line, painted records newest first,
+with earlier placeholders listed separately. Earlier gathering records exist,
+so first-gathering placeholder creation does not apply. Source/record/preview
+files in all four line folders are unchanged. The required PNG remains untracked
+for the uploader. `delivery-check-40.json` records final structural checks and
+source-export size; external packaging remains outside this local check.

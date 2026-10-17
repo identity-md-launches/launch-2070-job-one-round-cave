@@ -1,0 +1,30 @@
+{
+  "name": "The Matched Stone",
+  "image": "https://api.imd.fun/artifacts/9b56d636ac64fb24886c3171dbbcc967dce0c977f4b12a385e1f02e64d438d0d",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 40
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "API Bundle ContainsCheck and directory validation"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "One circled pebble keeps its meaning as checked work passes between workers."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
+    }
+  ]
+}
