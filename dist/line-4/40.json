@@ -1,0 +1,30 @@
+{
+  "name": "The Matching Stone",
+  "image": "https://api.imd.fun/artifacts/c7b3f925abd63ce6cc789992d5300f96573d7f3d3423e435e69bb474cbad2c19",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 4"
+    },
+    {
+      "trait_type": "Number",
+      "value": 40
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "ContainsCheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "One ringed stone among three marks the item an array must contain."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Detect breaking OpenAPI changes"
+    }
+  ]
+}

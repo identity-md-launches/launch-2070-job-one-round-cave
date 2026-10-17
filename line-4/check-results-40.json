@@ -1,0 +1,253 @@
+{
+  "suites": [
+    {
+      "tool": "apidelta",
+      "exit": 0,
+      "tests": 44,
+      "stdout": "",
+      "stderr": "............................................\n----------------------------------------------------------------------\nRan 44 tests in 0.333s\n\nOK\n"
+    },
+    {
+      "tool": "authcheck",
+      "exit": 0,
+      "tests": 13,
+      "stdout": "",
+      "stderr": ".............\n----------------------------------------------------------------------\nRan 13 tests in 8.413s\n\nOK\n"
+    },
+    {
+      "tool": "boundcheck",
+      "exit": 0,
+      "tests": 11,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.283s\n\nOK\n"
+    },
+    {
+      "tool": "constcheck",
+      "exit": 0,
+      "tests": 11,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.302s\n\nOK\n"
+    },
+    {
+      "tool": "containscheck",
+      "exit": 0,
+      "tests": 9,
+      "stdout": "",
+      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.098s\n\nOK\n"
+    },
+    {
+      "tool": "dependcheck",
+      "exit": 0,
+      "tests": 11,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 1.167s\n\nOK\n"
+    },
+    {
+      "tool": "dispatchcheck",
+      "exit": 0,
+      "tests": 19,
+      "stdout": "",
+      "stderr": "...................\n----------------------------------------------------------------------\nRan 19 tests in 0.136s\n\nOK\n"
+    },
+    {
+      "tool": "fallbackheaders",
+      "exit": 0,
+      "tests": 9,
+      "stdout": "",
+      "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 0.014s\n\nOK\n"
+    },
+    {
+      "tool": "headercheck",
+      "exit": 0,
+      "tests": 15,
+      "stdout": "",
+      "stderr": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.030s\n\nOK\n"
+    },
+    {
+      "tool": "idcheck",
+      "exit": 0,
+      "tests": 13,
+      "stdout": "",
+      "stderr": ".............\n----------------------------------------------------------------------\nRan 13 tests in 0.345s\n\nOK\n"
+    },
+    {
+      "tool": "keycheck",
+      "exit": 0,
+      "tests": 16,
+      "stdout": "",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.438s\n\nOK\n"
+    },
+    {
+      "tool": "mapcheck",
+      "exit": 0,
+      "tests": 16,
+      "stdout": "",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.215s\n\nOK\n"
+    },
+    {
+      "tool": "multiplecheck",
+      "exit": 0,
+      "tests": 16,
+      "stdout": "",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 1.616s\n\nOK\n"
+    },
+    {
+      "tool": "oauthcheck",
+      "exit": 0,
+      "tests": 16,
+      "stdout": "",
+      "stderr": "................\n----------------------------------------------------------------------\nRan 16 tests in 0.348s\n\nOK\n"
+    },
+    {
+      "tool": "paramcheck",
+      "exit": 0,
+      "tests": 14,
+      "stdout": "",
+      "stderr": "..............\n----------------------------------------------------------------------\nRan 14 tests in 0.027s\n\nOK\n"
+    },
+    {
+      "tool": "schemecheck",
+      "exit": 0,
+      "tests": 11,
+      "stdout": "",
+      "stderr": "...........\n----------------------------------------------------------------------\nRan 11 tests in 0.486s\n\nOK\n"
+    },
+    {
+      "tool": "servercheck",
+      "exit": 0,
+      "tests": 15,
+      "stdout": "",
+      "stderr": "...............\n----------------------------------------------------------------------\nRan 15 tests in 0.357s\n\nOK\n"
+    },
+    {
+      "tool": "statuscheck",
+      "exit": 0,
+      "tests": 22,
+      "stdout": "",
+      "stderr": "......................\n----------------------------------------------------------------------\nRan 22 tests in 0.062s\n\nOK\n"
+    },
+    {
+      "tool": "tuplecheck",
+      "exit": 0,
+      "tests": 14,
+      "stdout": "",
+      "stderr": "..............\n----------------------------------------------------------------------\nRan 14 tests in 0.419s\n\nOK\n"
+    },
+    {
+      "tool": "uniquecheck",
+      "exit": 0,
+      "tests": 10,
+      "stdout": "",
+      "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.350s\n\nOK\n"
+    }
+  ],
+  "demo": {
+    "schema": "apidelta-report-v1",
+    "perspective": "existing clients upgrading to the new description",
+    "status": "breaking",
+    "counts": {
+      "breaking": 1,
+      "review": 1,
+      "info": 0
+    },
+    "operations_compared": 5,
+    "findings": [
+      {
+        "severity": "review",
+        "code": "document_metadata_changed",
+        "location": "/",
+        "message": "Document metadata, components or extensions changed; review anything not covered by specific findings."
+      },
+      {
+        "severity": "breaking",
+        "code": "schema_enum_incompatible",
+        "location": "/paths/~1openapi.json/get/responses/200/content/application~1json/schema/contains/enum",
+        "message": "Response enum can contain formerly excluded values."
+      }
+    ],
+    "limits": "Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.",
+    "extension": "containscheck-v1 (includes tuplecheck and earlier analyzers)",
+    "contains_pairs": [
+      {
+        "location": "/paths/~1openapi.json/get/responses/200/content/application~1json/schema/contains",
+        "direction": "response",
+        "old_present": true,
+        "new_present": true,
+        "old_min": 1,
+        "new_min": 1,
+        "old_max": null,
+        "new_max": null
+      }
+    ],
+    "tuple_pairs": [],
+    "key_pairs": [],
+    "map_pairs": [],
+    "dispatch_pairs": [],
+    "schema_visits": 363,
+    "selector_groups": [],
+    "status_visits": 2500,
+    "remapped_header_pairs": 0,
+    "contains_scope": "OpenAPI 3.1 contains with positive minimum and no maximum: compare referenced predicates by request/response variance. Compare count bounds only when predicates resolve identically. These are potential region-level breaks, not whole-array proof.",
+    "capture_sha256": "be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a",
+    "baseline_source": "https://api.imd.fun/openapi.json",
+    "demo": "Saved real IMD operation with a hypothetical OpenAPI 3.1 response array. Only a referenced contains enum expands. This is not an observed service change; no API operation was called."
+  },
+  "unchanged_capture": {
+    "schema": "apidelta-report-v1",
+    "perspective": "existing clients upgrading to the new description",
+    "status": "no_detected_breakage",
+    "counts": {
+      "breaking": 0,
+      "review": 0,
+      "info": 0
+    },
+    "operations_compared": 5,
+    "findings": [],
+    "limits": "Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.",
+    "extension": "containscheck-v1 (includes tuplecheck and earlier analyzers)",
+    "contains_pairs": [],
+    "tuple_pairs": [],
+    "key_pairs": [],
+    "map_pairs": [],
+    "dispatch_pairs": [],
+    "schema_visits": 371,
+    "selector_groups": [],
+    "status_visits": 2500,
+    "remapped_header_pairs": 0,
+    "contains_scope": "OpenAPI 3.1 contains with positive minimum and no maximum: compare referenced predicates by request/response variance. Compare count bounds only when predicates resolve identically. These are potential region-level breaks, not whole-array proof."
+  },
+  "capture_sha256": "be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a",
+  "independent_singleton_oracle_cases": 98,
+  "suite_scratch_policy": "TemporaryDirectory redirected to test/scratch; source tests unchanged",
+  "live": {
+    "source": "https://api.imd.fun/openapi.json",
+    "user_agent": "Pepeolithic-ContainsCheck/40.0",
+    "bytes": 23132,
+    "sha256": "be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a",
+    "matches_capture": true,
+    "comparison": {
+      "schema": "apidelta-report-v1",
+      "perspective": "existing clients upgrading to the new description",
+      "status": "no_detected_breakage",
+      "counts": {
+        "breaking": 0,
+        "review": 0,
+        "info": 0
+      },
+      "operations_compared": 5,
+      "findings": [],
+      "limits": "Static conservative subset analysis, not a full OpenAPI validator or proof of runtime compatibility. Review findings are unresolved.",
+      "extension": "containscheck-v1 (includes tuplecheck and earlier analyzers)",
+      "contains_pairs": [],
+      "tuple_pairs": [],
+      "key_pairs": [],
+      "map_pairs": [],
+      "dispatch_pairs": [],
+      "schema_visits": 371,
+      "selector_groups": [],
+      "status_visits": 2500,
+      "remapped_header_pairs": 0,
+      "contains_scope": "OpenAPI 3.1 contains with positive minimum and no maximum: compare referenced predicates by request/response variance. Compare count bounds only when predicates resolve identically. These are potential region-level breaks, not whole-array proof."
+    }
+  }
+}

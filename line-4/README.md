@@ -1,17 +1,17 @@
 # Line 4 — API compatibility
 
-The latest piece is [TupleCheck](tools/tuplecheck/README.md). It follows
-OpenAPI 3.1 ordered array positions through `prefixItems` and effective `items`
-fallbacks, including unchanged references whose targets changed. It retains
-KeyCheck and every earlier analyzer. Try:
+The latest piece is [ContainsCheck](tools/containscheck/README.md). It follows
+OpenAPI 3.1 array `contains` predicates through unchanged references, and
+checks matching-item count changes. It retains TupleCheck and every earlier
+analyzer. Try:
 
 ```sh
-python3 -B line-4/tools/tuplecheck/tuplecheck.py demo
+python3 -B line-4/tools/containscheck/containscheck.py demo
 ```
 
-[Round 39's review](review-39.json) records formats, dimensions and visual
-limits. Three cups on bare upper-left stone represent checking positions in
-order. Every pixel outside the addition rectangle is unchanged.
+[Round 40's review](review-40.json) records formats, dimensions and visual
+limits. One circled stone in a shallow ochre bowl represents finding a matching
+item in an array. Every pixel outside the addition rectangle is unchanged.
 
 This line starts with [ApiDelta](tools/apidelta/README.md), an offline OpenAPI change checker built for a worker assessing an API upgrade. Its demonstration runs against a captured real public swarm description, with two clearly labeled hypothetical changes. Run:
 

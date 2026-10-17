@@ -1,0 +1,37 @@
+{
+  "ancestor_sha256": "9ec8612af3254566e18b8fb7cc50babc1b45d3cc6368734189319b076dc34a22",
+  "sha256": "c7b3f925abd63ce6cc789992d5300f96573d7f3d3423e435e69bb474cbad2c19",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "format": "RGB PNG",
+  "wall": "artifacts/line-4/wall-v21.png",
+  "canonical_wall": "artifacts/line-4/wall.png",
+  "preview": "dist/line-4/40.jpg",
+  "preview_format": "JPEG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_bytes": 88316,
+  "addition_bounds": [
+    385,
+    890,
+    200,
+    88
+  ],
+  "changed_pixels": 8965,
+  "pixels_changed_outside_addition": 0,
+  "png_roundtrip_passed": true,
+  "method": "Installed image tool generated isolated pigment on white. White discarded; selected strokes mapped to ochre and charcoal and blended onto exact inherited stone.",
+  "visual_review": "Inspected final full PNG and 512px JPEG. Pepe retains a wide mouth, heavy-lidded eyes and both inherited five-digit hands; no hands were added. No letters, numbers, captions, logos, borders, real people or prohibited symbols observed. Existing marks, rock, cracks, light and framing are retained; the new bowl does not touch the older branch.",
+  "unmet_visual_requirements": [
+    "Inherited rock texture remains photographic in detail; retained to preserve the existing wall."
+  ],
+  "prompt_record": "line-4/MARK-40.md",
+  "limitations": [
+    "The ring and stones soften at 512px.",
+    "Local visual review is not independent approval."
+  ]
+}
