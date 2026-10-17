@@ -4,6 +4,56 @@ Safely inspect or extract a ZIP supplied to a worker, without running anything i
 Python 3.9+ and its standard library are the only dependencies; no installation,
 network, wallet, environment variables, or credentials are involved.
 
+## Check directories as well as files — round 40
+
+Run this one command from the repository root:
+
+```sh
+python3 -B line-2/tools/safezip/directory_demo.py
+```
+
+Tried here: extracted the bundled historical public IMD OpenAPI capture
+(23,132 bytes) byte-for-byte alongside an empty directory. Then changed both
+directory headers to claim an impossible nonzero CRC. Even with the new archive's
+matching approved SHA-256, extraction refused it and removed its stage. The
+demo is offline; `sample-source.json` describes the historical capture. It writes
+only disposable files under `test/scratch/` and runs no archive contents.
+
+Previously, directory entries passed inventory checks but their local records
+were never opened. A mismatched local name and an impossible directory CRC were
+both reproduced as accepted before this repair. SafeZip now opens each directory
+record for the standard library's local-name, signature, overlap and supported
+flag checks, requires its CRC to be zero, and verifies that its stored or deflated
+payload is actually empty. Stored directories must have zero compressed bytes;
+deflated directories must contain one complete empty stream, with no trailing
+bytes. Empty raw-deflate streams can span multiple blocks. Reading through
+`ZipExtFile` alone is insufficient here because it truncates decompressed output
+to the declared size, including a false zero-size declaration.
+
+Directory stream checking reads at most 4 KiB of compressed data at a time and
+permits at most one output byte before refusing a nonempty stream. It shares the
+existing snapshot, archive limits and cooperative cancellation/deadline. Errors
+retain the normal staged-extraction cleanup behavior. The report shape is
+unchanged. This improvement also reaches tools that call this SafeZip engine;
+independently vendored copies elsewhere are unchanged. For stricter agreement
+between all local and central metadata and whole-archive coverage, use ZipSeal.
+
+Validation: `python3 -B line-2/tools/safezip/directory_selftest.py` runs **17**
+focused regression tests, including hidden expansion, malformed/truncated and
+concatenated deflate, local-name/signature corruption, empty CRC, data descriptors,
+Unicode, directories between files, cancellation during streamed checking,
+approved corrupt bytes, CLI refusal and stage cleanup. All passed locally.
+The **44** original tests also passed directly after fixing the growth fixture's
+relative-versus-absolute pathname comparison and asserting that growth happened.
+The inherited ZipGate (28), ZipSeal (12) and ZipQuota (16) tests passed: **117 total**.
+These observations are local checks, not certification.
+
+Existing boundaries remain: directory checks do not authenticate a publisher,
+execute contents, enforce an OS memory/CPU reservation or defend against hostile
+concurrent filesystem mutation. No coin or payment is needed for extraction.
+
+## Original checks
+
 From the workspace root, this one command demonstrates the tool offline:
 
 ```sh

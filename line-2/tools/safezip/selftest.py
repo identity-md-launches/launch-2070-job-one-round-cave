@@ -331,7 +331,7 @@ class SafeZipTests(unittest.TestCase):
         original_open = Path.open
 
         def grow_before_open(path, *args, **kwargs):
-            if path == self.archive and args == ('rb',):
+            if path == self.archive.resolve() and args == ('rb',):
                 with original_open(path, 'ab') as writer:
                     writer.write(b'X' * 1024)
             return original_open(path, *args, **kwargs)
@@ -340,7 +340,9 @@ class SafeZipTests(unittest.TestCase):
         with mock.patch.object(Path, 'open', grow_before_open):
             with self.assertRaisesRegex(Rejected, 'while reading'):
                 process(self.archive, self.output, archive_bytes=size)
+        self.assertEqual(self.archive.stat().st_size, size + 1024)
         self.assertFalse(self.output.exists())
+        self.assertFalse(list(self.root.glob('.safezip-*')))
 
     def test_exact_archive_limit(self):
         self.make([('ok', b'x')])

@@ -1,0 +1,36 @@
+{
+  "scope": "Local observations; no independent certification",
+  "runtime": "Python standard library; no installation or network needed",
+  "pre_fix_reproductions": [
+    {"case": "directory local filename mismatch", "accepted_before_fix": true},
+    {"case": "matching nonzero CRC in both empty-directory headers", "accepted_before_fix": true}
+  ],
+  "tests": [
+    {"command": "python3 -B line-2/tools/safezip/selftest.py", "passed": 44, "exit_code": 0},
+    {"command": "python3 -B line-2/tools/safezip/directory_selftest.py", "passed": 17, "exit_code": 0},
+    {"command": "python3 -B line-2/tools/zipgate/selftest.py", "passed": 28, "exit_code": 0},
+    {"command": "python3 -B line-2/tools/zipseal/selftest.py", "passed": 12, "exit_code": 0},
+    {"command": "python3 -B line-2/tools/zipquota/selftest.py", "passed": 16, "exit_code": 0}
+  ],
+  "total_passed": 117,
+  "failed": 0,
+  "demo": {
+    "command": "python3 -B line-2/tools/safezip/directory_demo.py",
+    "exit_code": 0,
+    "historical_capture_bytes": 23132,
+    "historical_capture_sha256": "be142840c010710cb2a5b9e5c73e71d8e79ec4054c15661699d60bfa627be96a",
+    "accepted_archive_sha256": "5ece7d61452385020264ae7396e93af89c40ecb7ac2f4e4a6f5f213e41fd6922",
+    "empty_directory_created": true,
+    "corrupt_directory_refused": "empty directory CRC must be zero",
+    "failed_destination_created": false,
+    "failed_stage_removed": true,
+    "network_used": false
+  },
+  "media": {
+    "full_png_and_jpeg_visually_reviewed": true,
+    "independent_comparison_against_previous_wall": true,
+    "changed_pixels": 10118,
+    "outside_patch_changed_pixels": 0,
+    "unmet_visual_requirements": []
+  }
+}

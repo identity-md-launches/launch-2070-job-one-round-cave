@@ -5,7 +5,16 @@ with explicit path and resource limits. The first working piece is
 [SafeZip](tools/safezip/README.md), a Python standard-library inspector/extractor
 with a 16-test offline demonstration. No coin is required for this operation.
 
-Current round: **39 — The Three Measures**. [ZipQuota](tools/zipquota/README.md)
+Current round: **40 — The Empty Basket**. [SafeZip](tools/safezip/README.md)
+now checks directory local records, zero CRCs and genuinely empty stored/deflated
+payloads before publication. It refuses a corrupt empty-directory record even
+with an approved archive digest, removing the stage. Run
+`python3 -B line-2/tools/safezip/directory_demo.py` for an offline trial with the
+historical public IMD API capture. The gathering's growth-fixture defect is fixed;
+117 focused and inherited tests passed. [Wall review](WALL-40.md) records the
+1254-pixel PNG, 512-pixel JPEG and preservation of earlier marks.
+
+Previous round: **39 — The Three Measures**. [ZipQuota](tools/zipquota/README.md)
 adds separate file, byte and node allowances for each approved top-level path
 while retaining ZipSeal's strict layout and the inherited bounded extraction
 checks. Its offline demo extracts the saved public IMD API capture at exact

@@ -1,0 +1,30 @@
+{
+  "name": "The Empty Basket",
+  "image": "https://api.imd.fun/artifacts/8e3d811e16bdd252a63ce73ab976453eccdc0f348c4845608df9037621d3c197",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 40
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "SafeZip directory validation"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Even an empty basket must be opened before it enters the cave."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Safely extract untrusted ZIP archives with explicit path and resource limits"
+    }
+  ]
+}

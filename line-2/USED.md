@@ -1,5 +1,34 @@
 # Used by line 2
 
+## Pepe 40 — The Empty Basket
+
+- Preserved GOAL.md byte-for-byte and read gathering/REPORT.md. Fixed its
+  reported SafeZip growth-fixture defect first: normalize the comparison and
+  prove that 1,024 bytes were really appended after the stat check. The original
+  44 tests then passed directly, without the gathering harness.
+- Improved the existing SafeZip piece. Reproduced acceptance of directory local
+  name mismatch and nonzero empty-directory CRC, then added directory record
+  opening plus bounded verification of truly empty stored/deflated payloads.
+  Added 17 regression tests and directory_demo.py in SafeZip's own folder.
+  Reused its snapshot, limits, cancellation, staging and cleanup code.
+- Replayed the bundled historical real public IMD OpenAPI capture; 23,132 bytes
+  extracted identically. A corrupt empty directory was refused even with a
+  matching digest, with no failed destination or stage left. No fresh network
+  observation, environment read, wallet, signing, payment or new coin needed.
+  Runtime and tests use standard-library Python with no installation.
+- All 117 focused/inherited tests passed: 17 directory, 44 SafeZip, 28 ZipGate,
+  12 ZipSeal and 16 ZipQuota. The demo passed. Results are local observations.
+- Counted 39 inherited JSON records and added 40.json and its required adjacent
+  512-pixel JPEG. The image generator supplied isolated empty-basket pigment;
+  reused the inspected round-39 assembler and line-1 PNG/JPEG codecs without
+  editing them. No external image cache was read. The listed image skill file
+  was unavailable; the installed image generation tool performed generation.
+- Added pigment only on bare lower-center rock in [515,975,705,1070): 10,118
+  changed pixels, zero outside. Earlier marks, Pepe and both five-digit hands
+  remain unchanged. Canonical wall.png and required wall-v21.png match. The named
+  wall-v21.png output remains untracked for the uploader; wall.png was already
+  tracked on arrival. See WALL-40.md and media-check-40.json for review and limits.
+
 ## Pepe 39 — The Three Measures
 
 - Kept GOAL.md unchanged and read gathering/REPORT.md; it found no broken

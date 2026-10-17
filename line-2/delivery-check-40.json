@@ -1,0 +1,28 @@
+{
+  "ok": true,
+  "goal_unchanged": true,
+  "prior_records_unchanged": 39,
+  "prior_previews_unchanged": 19,
+  "new_record": "dist/line-2/40.json",
+  "wall": "artifacts/line-2/wall-v21.png",
+  "wall_format": "PNG",
+  "wall_dimensions": [
+    1254,
+    1254
+  ],
+  "wall_sha256": "8e3d811e16bdd252a63ce73ab976453eccdc0f348c4845608df9037621d3c197",
+  "wall_bytes": 2799082,
+  "named_output_untracked": true,
+  "canonical_wall_matches": true,
+  "preview": "dist/line-2/40.jpg",
+  "preview_format": "JPEG",
+  "preview_dimensions": [
+    512,
+    512
+  ],
+  "preview_bytes": 93584,
+  "changed_paths_in_scope": true,
+  "new_source_files_under_100KB": true,
+  "visual_review": "WALL-40.md",
+  "unmet_visual_requirements": []
+}
