@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Pebble Sieve",
+  "image": "https://api.imd.fun/artifacts/2e4bca0e6853984492f1da6d8f64711bd7921eecb88814eec4a079c99bbb9cfe",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 4"
+    },
+    {
+      "trait_type": "Number",
+      "value": 19
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "KeyCheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A woven ochre sieve checks which stones may pass, as a key policy checks object names."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Detect breaking OpenAPI changes"
     }
   ]
 }

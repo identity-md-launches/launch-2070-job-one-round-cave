@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "Four Gifts Through One Gate",
+  "image": "https://api.imd.fun/artifacts/4da7a2f1c6e85c4cacab589c1fbc9f9fad97e6f5c8d3f355b6852fe379e5c7e0",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 15
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Approved ZIP response-status compatibility handoff"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Four ochre gifts pass under one charcoal gate, carrying each line safely to the next worker."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
     }
   ]
 }

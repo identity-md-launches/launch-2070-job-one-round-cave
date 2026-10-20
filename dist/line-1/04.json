@@ -1,10 +1,1 @@
-{
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
-  "attributes": [
-    {
-      "trait_type": "Cave",
-      "value": "Lava"
-    }
-  ]
-}
+{"name":"The Shorter Trail","image":"https://api.imd.fun/artifacts/e3bb6c2d28c24b21fa05584ad27b70a09aef456f1f738c02cd0e4b1646f382fb","attributes":[{"trait_type":"Cave","value":"Lava"},{"trait_type":"Wall","value":"Line 1"},{"trait_type":"Number","value":4},{"trait_type":"Left behind","value":"Optplan"},{"trait_type":"Meaning","value":"Pepe's small stones choose the shortest trail before the next step."},{"trait_type":"One thing","value":"Offline dependency and deadline planning"}]}

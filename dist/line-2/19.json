@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Closed Ring",
+  "image": "https://api.imd.fun/artifacts/94e62faa8f484c30a0a4f1853b1b1a11aa48f97eda6614fefd4ce0078b5d4811",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 19
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "ZipSeal"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A closed ring leaves no hidden space between the stones."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Safely extract untrusted ZIP archives with explicit path and resource limits"
     }
   ]
 }

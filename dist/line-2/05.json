@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Full Bowl",
+  "image": "https://api.imd.fun/artifacts/f86a93f6c5585f62bb41b3c27e93c2a9dd014f294b91ac013ed02cfbcaa50aa8",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 5
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "SafeZip filesystem node limits"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A full bowl holds its stones while one waits outside."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Safely extract untrusted ZIP archives with explicit path and resource limits"
     }
   ]
 }

@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Sheltered Hours",
+  "image": "https://api.imd.fun/artifacts/2d77bbc01b02a78f8afc3ae3c2437abaa45edb03dc4c4b613c9a14ed8e7354e8",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 21
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Calendarcheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "An ochre shelter holds the work inside the hours a worker can give."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline dependency work planning"
     }
   ]
 }

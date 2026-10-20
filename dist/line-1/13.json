@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Measured Gate",
+  "image": "https://api.imd.fun/artifacts/2ed03d0d61334c7ecd02829176be8522988487220172d1892b26c870ea4645a5",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 13
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Gatecheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A small gate marks a planned handoff before the path is done."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline dependency work planning"
     }
   ]
 }

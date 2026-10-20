@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "Two Streams, One Bowl",
+  "image": "https://api.imd.fun/artifacts/48e05788146b4cdd85d8e2b2a5f37cd66a3be26b646b0987ec8164e7a9208eca",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 7
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "RewardMerge"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two streams of pebbles join one bowl as Pepe counts exact ZTO shares across rounds."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Exact ZTO reward allocation"
     }
   ]
 }

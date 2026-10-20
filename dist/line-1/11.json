@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "Room in the Nest",
+  "image": "https://api.imd.fun/artifacts/b659648b1180446dde298beb37af93e909f6f8bce1e699db33f6fe72ca2b0fcc",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 11
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Idlemap"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A nest holds spare room for work whose time has not yet come."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline dependency work planning"
     }
   ]
 }

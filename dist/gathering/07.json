@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Bound Branches",
+  "image": "https://api.imd.fun/artifacts/b19664c882ed18ce34c90dd27759b0eade3b590977ba5439c8cd6ece3354571d",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 7
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "API Bundle with DependCheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two charcoal branches bound with ochre carry checked dependencies between workers."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
     }
   ]
 }

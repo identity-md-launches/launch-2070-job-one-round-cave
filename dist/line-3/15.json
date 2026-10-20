@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Carried Shares",
+  "image": "https://api.imd.fun/artifacts/5fddc2105f66b94fbc8db4e07a3848032939245ab1f6c3c5cba6f16a5f469696",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 15
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "RewardCSV"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe carries exact shares together on a small ochre tray."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Exact ZTO reward allocation"
     }
   ]
 }

@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Reviewed Share",
+  "image": "https://api.imd.fun/artifacts/c3c41e2fc90372b0038bd5962b901b9bcb4de15a9623d55431ecf98149c3f252",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 19
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "RewardRevision"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe reviews the changed bowls so every allocated pebble remains accounted for."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Exact ZTO reward allocation"
     }
   ]
 }

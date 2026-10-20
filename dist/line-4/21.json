@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Matching Stone",
+  "image": "https://api.imd.fun/artifacts/c7b3f925abd63ce6cc789992d5300f96573d7f3d3423e435e69bb474cbad2c19",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 4"
+    },
+    {
+      "trait_type": "Number",
+      "value": 21
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "ContainsCheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "One ringed stone among three marks the item an array must contain."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Detect breaking OpenAPI changes"
     }
   ]
 }

@@ -1,10 +1,12 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Handoff Stones",
+  "image": "https://api.imd.fun/artifacts/5d924d234c8f677d2223f0809174718248dcfdd6e22f52524e1aea0e19a35146",
   "attributes": [
-    {
-      "trait_type": "Cave",
-      "value": "Lava"
-    }
+    {"trait_type": "Cave", "value": "Lava"},
+    {"trait_type": "Wall", "value": "Line 1"},
+    {"trait_type": "Number", "value": 15},
+    {"trait_type": "Left behind", "value": "Gateplan"},
+    {"trait_type": "Meaning", "value": "Ochre paths meet a chalk handoff stone before the shared time runs out."},
+    {"trait_type": "One thing", "value": "Offline dependency work planning"}
   ]
 }

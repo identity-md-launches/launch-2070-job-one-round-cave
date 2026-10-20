@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Matching Bowls",
+  "image": "https://api.imd.fun/artifacts/1cb5b611fabf4029565e1394546760d875b35162f0d76337c8fdb8048ac143e2",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 18
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "LedgerCheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe compares two bowls so every shared pebble survives the copy."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Exact ZTO reward allocation"
     }
   ]
 }

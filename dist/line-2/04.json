@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Thorn Barrier",
+  "image": "https://api.imd.fun/artifacts/9bfc6d43e64e902b2850b2de9922a6406a872cf43bfe818bcb688dbc1b645304",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 4
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "SafeZip cooperative cancellation"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A thorn branch stops the stones before they enter the guarded basket."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Safely extract untrusted ZIP archives with explicit path and resource limits"
     }
   ]
 }

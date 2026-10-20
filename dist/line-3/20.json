@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Shared Enclosure",
+  "image": "https://api.imd.fun/artifacts/1085ee6f9ab5a719f90260952e30b895dcf355530fbf645d06cc457a84dab3ab",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 20
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "RewardGroup"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe gathers distinct pebble shares inside one ring without changing what each holds."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Exact ZTO reward allocation"
     }
   ]
 }

@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Values in the Basket",
+  "image": "https://api.imd.fun/artifacts/962a7a2b80d000e96ebd7739df0576c08d8616ce6b23753376e5a77b0ee5a81a",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 4"
+    },
+    {
+      "trait_type": "Number",
+      "value": 18
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "MapCheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Three different stones sit in an ochre basket, each value checked within its container."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Detect breaking OpenAPI changes"
     }
   ]
 }

@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Companion Twig",
+  "image": "https://api.imd.fun/artifacts/d3496f7d910ac2de6db7bf9df12cc6daaac17d3e865b8f48230d433383b22081",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 4"
+    },
+    {
+      "trait_type": "Number",
+      "value": 7
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "DependCheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "An ochre twig and a chalk stone mark the companions a field must bring."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Detect breaking OpenAPI changes"
     }
   ]
 }

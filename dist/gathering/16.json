@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Promise Kept Inside",
+  "image": "https://api.imd.fun/artifacts/a32258ddc7c87486b71d4fcf5170171d79af50cec0e9fa7a36c28463f9b46aae",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 16
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Approved ZIP fallback-header compatibility handoff"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A bound ochre pouch keeps its chalk seal, carrying a promise intact to the next worker."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
     }
   ]
 }

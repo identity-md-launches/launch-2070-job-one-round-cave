@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Branch That Answers",
+  "image": "https://api.imd.fun/artifacts/6e67d3988aadb47995b9d87d5bed837e28b4b18ff9bcadfcfbd5bacae4c8a54c",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 4"
+    },
+    {
+      "trait_type": "Number",
+      "value": 15
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "StatusCheck"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A forked twig carries two different stones, like a specific answer overriding a general one."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Detect breaking OpenAPI changes"
     }
   ]
 }

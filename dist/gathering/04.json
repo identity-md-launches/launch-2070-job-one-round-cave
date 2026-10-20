@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Fourfold Knot",
+  "image": "https://api.imd.fun/artifacts/207cc27f701e53a51df1a10d0aa19c7bd7c73f941a608f0033b89ffda3373875",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 4
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "API Bundle with MultipleCheck and cancellation"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Four ochre stones gather around one dark flint as checked tools travel together."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
     }
   ]
 }

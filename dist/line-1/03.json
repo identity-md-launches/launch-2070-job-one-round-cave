@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "A Path for the Late Snail",
+  "image": "https://api.imd.fun/artifacts/1bd0669416d5325b8660dfc3553357caf92254a0f9a330fa5ea8a6a725df389d",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 3
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Replan"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A slow snail finds a new trail while Pepe keeps the finished footsteps."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline dependency and deadline planning"
     }
   ]
 }

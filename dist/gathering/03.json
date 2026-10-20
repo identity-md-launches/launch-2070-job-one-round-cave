@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "Keep the Checked Tools Together",
+  "image": "https://api.imd.fun/artifacts/ac88d7b34df299e3ce8dbcf2ff53a9b331b54df69e964d06fd68ce049193ed21",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 3
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Approved API Bundle"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two flints share one ochre knot so the tools we checked can travel together."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
     }
   ]
 }

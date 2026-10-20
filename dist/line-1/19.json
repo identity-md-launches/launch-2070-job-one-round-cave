@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/09ee8caaf2f2f23c437db97f072627760da64d33dbd2b3409379a24a4a38d26a",
+  "name": "The Timely Knot",
+  "image": "https://api.imd.fun/artifacts/a804add83932fd940467edd5f8003fc9db52a9859b7fafe4d67a6155fe9a7cce",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Lava"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 19
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Gatelock"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "A knotted cord joins shared tools and timely handoffs into one workable path."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Offline dependency work planning"
     }
   ]
 }
